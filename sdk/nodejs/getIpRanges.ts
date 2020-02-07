@@ -36,7 +36,7 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
- *
+ * 
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ip_ranges.html.markdown.
  */
 export function getIpRanges(args: GetIpRangesArgs, opts?: pulumi.InvokeOptions): Promise<GetIpRangesResult> & GetIpRangesResult {
@@ -93,6 +93,10 @@ export interface GetIpRangesResult {
      */
     readonly createDate: string;
     /**
+     * id is the provider-assigned unique ID for this managed resource.
+     */
+    readonly id: string;
+    /**
      * The lexically ordered list of IPv6 CIDR blocks.
      */
     readonly ipv6CidrBlocks: string[];
@@ -104,8 +108,4 @@ export interface GetIpRangesResult {
      */
     readonly syncToken: number;
     readonly url?: string;
-    /**
-     * id is the provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
 }

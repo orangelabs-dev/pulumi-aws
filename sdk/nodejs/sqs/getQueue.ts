@@ -2,6 +2,8 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
+import * as inputs from "../types/input";
+import * as outputs from "../types/output";
 import * as utilities from "../utilities";
 
 /**
@@ -19,7 +21,7 @@ import * as utilities from "../utilities";
  *     name: "queue",
  * });
  * ```
- *
+ * 
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sqs_queue.html.markdown.
  */
 export function getQueue(args: GetQueueArgs, opts?: pulumi.InvokeOptions): Promise<GetQueueResult> & GetQueueResult {
@@ -57,6 +59,10 @@ export interface GetQueueResult {
      * The Amazon Resource Name (ARN) of the queue.
      */
     readonly arn: string;
+    /**
+     * id is the provider-assigned unique ID for this managed resource.
+     */
+    readonly id: string;
     readonly name: string;
     /**
      * A mapping of tags for the resource.
@@ -66,8 +72,4 @@ export interface GetQueueResult {
      * The URL of the queue.
      */
     readonly url: string;
-    /**
-     * id is the provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
 }

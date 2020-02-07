@@ -19,7 +19,7 @@ import * as utilities from "../utilities";
  *     directoryId: id,
  * }));
  * ```
- *
+ * 
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown.
  */
 export function getDirectory(args: GetDirectoryArgs, opts?: pulumi.InvokeOptions): Promise<GetDirectoryResult> & GetDirectoryResult {
@@ -80,6 +80,10 @@ export interface GetDirectoryResult {
      */
     readonly enableSso: boolean;
     /**
+     * id is the provider-assigned unique ID for this managed resource.
+     */
+    readonly id: string;
+    /**
      * The fully qualified name for the directory/connector.
      */
     readonly name: string;
@@ -104,8 +108,4 @@ export interface GetDirectoryResult {
      */
     readonly type: string;
     readonly vpcSettings: outputs.directoryservice.GetDirectoryVpcSetting[];
-    /**
-     * id is the provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
 }

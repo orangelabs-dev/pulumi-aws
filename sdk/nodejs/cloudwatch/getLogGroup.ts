@@ -19,7 +19,7 @@ import * as utilities from "../utilities";
  *     name: "MyImportantLogs",
  * });
  * ```
- *
+ * 
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown.
  */
 export function getLogGroup(args: GetLogGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetLogGroupResult> & GetLogGroupResult {
@@ -62,6 +62,10 @@ export interface GetLogGroupResult {
      */
     readonly creationTime: number;
     /**
+     * id is the provider-assigned unique ID for this managed resource.
+     */
+    readonly id: string;
+    /**
      * The ARN of the KMS Key to use when encrypting log data.
      */
     readonly kmsKeyId: string;
@@ -74,8 +78,4 @@ export interface GetLogGroupResult {
      * A mapping of tags to assign to the resource.
      */
     readonly tags: {[key: string]: any};
-    /**
-     * id is the provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
 }

@@ -3,6 +3,7 @@
 
 import * as pulumi from "@pulumi/pulumi";
 import * as inputs from "../types/input";
+import * as outputs from "../types/output";
 
 import {RoutingRule} from "../s3";
 
@@ -177,7 +178,6 @@ export interface ProviderEndpoint {
     workspaces?: pulumi.Input<string>;
     xray?: pulumi.Input<string>;
 }
-
 export namespace acm {
     export interface CertificateDomainValidationOption {
         /**
@@ -301,14 +301,14 @@ export namespace acmpca {
     }
 
     export interface GetCertificateAuthorityRevocationConfiguration {
-        crlConfigurations?: inputs.acmpca.GetCertificateAuthorityRevocationConfigurationCrlConfiguration[];
+        crlConfigurations: inputs.acmpca.GetCertificateAuthorityRevocationConfigurationCrlConfiguration[];
     }
 
     export interface GetCertificateAuthorityRevocationConfigurationCrlConfiguration {
-        customCname?: string;
-        enabled?: boolean;
-        expirationInDays?: number;
-        s3BucketName?: string;
+        customCname: string;
+        enabled: boolean;
+        expirationInDays: number;
+        s3BucketName: string;
     }
 }
 
@@ -2956,6 +2956,7 @@ export namespace cloudhsmv2 {
         hsmCertificate?: pulumi.Input<string>;
         manufacturerHardwareCertificate?: pulumi.Input<string>;
     }
+
 }
 
 export namespace cloudtrail {
@@ -4135,6 +4136,9 @@ export namespace cognito {
     }
 }
 
+export namespace config {
+}
+
 export namespace datasync {
     export interface EfsLocationEc2Config {
         /**
@@ -4265,6 +4269,7 @@ export namespace directoryservice {
          */
         vpcId: pulumi.Input<string>;
     }
+
 }
 
 export namespace dlm {
@@ -4369,8 +4374,8 @@ export namespace docdb {
 
 export namespace dynamodb {
     export interface GetTableServerSideEncryption {
-        enabled?: boolean;
-        kmsKeyArn?: string;
+        enabled: boolean;
+        kmsKeyArn: string;
     }
 
     export interface GlobalTableReplica {
@@ -5976,6 +5981,7 @@ export namespace efs {
          */
         transitionToIa?: pulumi.Input<string>;
     }
+
 }
 
 export namespace eks {
@@ -6013,9 +6019,6 @@ export namespace eks {
          * Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
          */
         endpointPublicAccess?: pulumi.Input<boolean>;
-        /**
-         * <elided>
-         */
         publicAccessCidrs?: pulumi.Input<pulumi.Input<string>[]>;
         /**
          * List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
@@ -6175,6 +6178,7 @@ export namespace elasticbeanstalk {
         resource?: pulumi.Input<string>;
         value: pulumi.Input<string>;
     }
+
 }
 
 export namespace elasticloadbalancing {
@@ -6792,9 +6796,6 @@ export namespace elasticsearch {
          * Whether or not to require HTTPS
          */
         enforceHttps: pulumi.Input<boolean>;
-        /**
-         * <elided>
-         */
         tlsSecurityPolicy?: pulumi.Input<string>;
     }
 
@@ -6872,6 +6873,7 @@ export namespace elasticsearch {
         subnetIds?: pulumi.Input<pulumi.Input<string>[]>;
         vpcId?: pulumi.Input<string>;
     }
+
 }
 
 export namespace elastictranscoder {
@@ -9279,6 +9281,7 @@ export namespace lambda {
         subnetIds: pulumi.Input<pulumi.Input<string>[]>;
         vpcId?: pulumi.Input<string>;
     }
+
 }
 
 export namespace lb {
@@ -9875,9 +9878,10 @@ export namespace mq {
     }
 
     export interface GetBrokerLogs {
-        audit?: boolean;
-        general?: boolean;
+        audit: boolean;
+        general: boolean;
     }
+
 }
 
 export namespace msk {
@@ -9986,17 +9990,11 @@ export namespace neptune {
 
 export namespace opsworks {
     export interface ApplicationAppSource {
-        /**
-         * <elided>
-         */
         password?: pulumi.Input<string>;
         /**
          * For sources that are version-aware, the revision to use.
          */
         revision?: pulumi.Input<string>;
-        /**
-         * <elided>
-         */
         sshKey?: pulumi.Input<string>;
         /**
          * The type of source to use. For example, "archive".
@@ -11028,7 +11026,7 @@ export namespace s3 {
          * A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
          * describing redirect behavior and when redirects are applied.
          */
-        routingRules?: pulumi.Input<string | RoutingRule[]>;
+        routingRules?: pulumi.Input<string> | pulumi.Input<pulumi.Input<RoutingRule>[]>;
     }
 
     export interface InventoryDestination {
@@ -11080,7 +11078,6 @@ export namespace s3 {
     }
 
     export interface InventoryDestinationBucketEncryptionSseS3 {
-    
     }
 
     export interface InventoryFilter {
@@ -12342,3 +12339,4 @@ export namespace workspaces {
         source: pulumi.Input<string>;
     }
 }
+

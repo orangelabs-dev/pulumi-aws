@@ -6,7 +6,7 @@ import * as inputs from "../types/input";
 import * as outputs from "../types/output";
 import * as utilities from "../utilities";
 
-import {PolicyDocument} from "../iam/documents";
+import {PolicyDocument} from "../iam";
 
 /**
  * Manages an AWS Elasticsearch Domain.
@@ -172,7 +172,7 @@ import {PolicyDocument} from "../iam/documents";
  *     },
  * }, {dependsOn: [esServiceLinkedRole]});
  * ```
- *
+ * 
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown.
  */
 export class Domain extends pulumi.CustomResource {
@@ -346,7 +346,7 @@ export interface DomainState {
     /**
      * IAM policy document specifying the access policies for the domain
      */
-    readonly accessPolicies?: pulumi.Input<string | PolicyDocument>;
+    readonly accessPolicies?: pulumi.Input<string> | pulumi.Input<PolicyDocument>;
     /**
      * Key-value string pairs to specify advanced configuration options.
      * Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -426,7 +426,7 @@ export interface DomainArgs {
     /**
      * IAM policy document specifying the access policies for the domain
      */
-    readonly accessPolicies?: pulumi.Input<string | PolicyDocument>;
+    readonly accessPolicies?: pulumi.Input<string> | pulumi.Input<PolicyDocument>;
     /**
      * Key-value string pairs to specify advanced configuration options.
      * Note that the values for these configuration options must be strings (wrapped in quotes) or they

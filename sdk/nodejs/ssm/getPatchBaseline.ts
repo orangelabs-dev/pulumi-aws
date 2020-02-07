@@ -37,7 +37,7 @@ import * as utilities from "../utilities";
  *     owner: "Self",
  * });
  * ```
- *
+ * 
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_patch_baseline.html.markdown.
  */
 export function getPatchBaseline(args: GetPatchBaselineArgs, opts?: pulumi.InvokeOptions): Promise<GetPatchBaselineResult> & GetPatchBaselineResult {
@@ -90,14 +90,14 @@ export interface GetPatchBaselineResult {
      */
     readonly description: string;
     /**
+     * id is the provider-assigned unique ID for this managed resource.
+     */
+    readonly id: string;
+    /**
      * The name of the baseline.
      */
     readonly name: string;
     readonly namePrefix?: string;
     readonly operatingSystem?: string;
     readonly owner: string;
-    /**
-     * id is the provider-assigned unique ID for this managed resource.
-     */
-    readonly id: string;
 }
