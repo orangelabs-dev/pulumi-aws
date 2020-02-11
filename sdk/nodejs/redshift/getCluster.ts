@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides details about a specific redshift cluster.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const testCluster = aws.redshift.getCluster({
  *     clusterIdentifier: "test-cluster",
  * });
@@ -38,7 +38,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown.
  */
 export function getCluster(args: GetClusterArgs, opts?: pulumi.InvokeOptions): Promise<GetClusterResult> & GetClusterResult {

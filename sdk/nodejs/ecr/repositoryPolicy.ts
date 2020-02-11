@@ -8,15 +8,15 @@ import {PolicyDocument} from "../iam";
 
 /**
  * Provides an Elastic Container Registry Repository Policy.
- * 
+ *
  * Note that currently only one policy may be applied to a repository.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = new aws.ecr.Repository("foo", {});
  * const foopolicy = new aws.ecr.RepositoryPolicy("foopolicy", {
  *     policy: `{
@@ -49,7 +49,7 @@ import {PolicyDocument} from "../iam";
  *     repository: foo.name,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository_policy.html.markdown.
  */
 export class RepositoryPolicy extends pulumi.CustomResource {

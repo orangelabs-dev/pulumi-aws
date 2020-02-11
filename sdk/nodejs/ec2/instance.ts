@@ -12,13 +12,13 @@ import {InstanceType} from "./index";
 /**
  * Provides an EC2 instance resource. This allows instances to be created, updated,
  * and deleted. Instances also support [provisioning](https://www.terraform.io/docs/provisioners/index.html).
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const ubuntu = aws.getAmi({
  *     filters: [
  *         {
@@ -41,7 +41,7 @@ import {InstanceType} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown.
  */
 export class Instance extends pulumi.CustomResource {

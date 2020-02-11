@@ -8,16 +8,16 @@ import * as utilities from "../utilities";
 
 /**
  * `aws.ec2.InternetGateway` provides details about a specific Internet Gateway.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * const vpcId = config.require("vpcId");
- * 
+ *
  * const defaultInternetGateway = aws.ec2.getInternetGateway({
  *     filters: [{
  *         name: "attachment.vpc-id",
@@ -25,7 +25,7 @@ import * as utilities from "../utilities";
  *     }],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/internet_gateway.html.markdown.
  */
 export function getInternetGateway(args?: GetInternetGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetInternetGatewayResult> & GetInternetGatewayResult {

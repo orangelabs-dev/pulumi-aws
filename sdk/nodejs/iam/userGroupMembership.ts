@@ -8,16 +8,16 @@ import * as utilities from "../utilities";
  * Provides a resource for adding an [IAM User][2] to [IAM Groups][1]. This
  * resource can be used multiple times with the same user for non-overlapping
  * groups.
- * 
+ *
  * To exclusively manage the users in a group, see the
  * [`aws.iam.GroupMembership` resource][3].
- * 
+ *
  * ## Example usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const user1 = new aws.iam.User("user1", {});
  * const group1 = new aws.iam.Group("group1", {});
  * const group2 = new aws.iam.Group("group2", {});
@@ -34,7 +34,7 @@ import * as utilities from "../utilities";
  *     user: user1.name,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_group_membership.html.markdown.
  */
 export class UserGroupMembership extends pulumi.CustomResource {

@@ -8,14 +8,14 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an AWS Cognito Identity Pool.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
  * import * as fs from "fs";
- * 
+ *
  * const defaultSamlProvider = new aws.iam.SamlProvider("default", {
  *     samlMetadataDocument: fs.readFileSync("saml-metadata.xml", "utf-8"),
  * });
@@ -42,7 +42,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.html.markdown.
  */
 export class IdentityPool extends pulumi.CustomResource {

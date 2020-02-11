@@ -8,15 +8,15 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a Load Balancer Listener Rule resource.
- * 
+ *
  * > **Note:** `aws.alb.ListenerRule` is known as `aws.lb.ListenerRule`. The functionality is identical.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const frontEndLoadBalancer = new aws.lb.LoadBalancer("frontEnd", {});
  * const frontEndListener = new aws.lb.Listener("frontEnd", {});
  * const static = new aws.lb.ListenerRule("static", {
@@ -115,7 +115,7 @@ import * as utilities from "../utilities";
  *     listenerArn: frontEndListener.arn,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_listener_rule.html.markdown.
  */
 export class ListenerRule extends pulumi.CustomResource {
@@ -207,7 +207,7 @@ export class ListenerRule extends pulumi.CustomResource {
         if (!opts.version) {
             opts.version = utilities.getVersion();
         }
-        const aliasOpts = { aliases: [{ type: "aws:elasticloadbalancingv2/listenerRule:ListenerRule"}] };
+        const aliasOpts = { aliases: [{ type: "aws:elasticloadbalancingv2/listenerRule:ListenerRule" }] };
         opts = opts ? pulumi.mergeOptions(opts, aliasOpts) : aliasOpts;
         super(ListenerRule.__pulumiType, name, inputs, opts);
     }

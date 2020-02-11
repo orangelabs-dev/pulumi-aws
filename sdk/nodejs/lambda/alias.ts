@@ -8,16 +8,16 @@ import * as utilities from "../utilities";
 
 /**
  * Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.
- * 
+ *
  * For information about Lambda and how to use it, see [What is AWS Lambda?][1]
  * For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const testAlias = new aws.lambda.Alias("testAlias", {
  *     description: "a sample description",
  *     functionName: aws_lambda_function_lambda_function_test.arn,
@@ -29,7 +29,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_alias.html.markdown.
  */
 export class Alias extends pulumi.CustomResource {

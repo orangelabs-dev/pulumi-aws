@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an AutoScaling Schedule resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foobarGroup = new aws.autoscaling.Group("foobar", {
  *     availabilityZones: ["us-west-2a"],
  *     forceDelete: true,
@@ -32,7 +32,7 @@ import * as utilities from "../utilities";
  *     startTime: "2016-12-11T18:00:00Z",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_schedule.html.markdown.
  */
 export class Schedule extends pulumi.CustomResource {

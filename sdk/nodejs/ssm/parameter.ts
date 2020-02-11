@@ -8,27 +8,27 @@ import {ParameterType} from "./index";
 
 /**
  * Provides an SSM Parameter resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * To store a basic string parameter:
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = new aws.ssm.Parameter("foo", {
  *     type: "String",
  *     value: "bar",
  * });
  * ```
- * 
+ *
  * To store an encrypted string using the default SSM KMS key:
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const defaultInstance = new aws.rds.Instance("default", {
  *     allocatedStorage: 10,
  *     dbSubnetGroupName: "myDatabaseSubnetGroup",
@@ -50,10 +50,10 @@ import {ParameterType} from "./index";
  *     value: var_database_master_password,
  * });
  * ```
- * 
+ *
  * > **Note:** The unencrypted value of a SecureString will be stored in the raw state as plain-text.
  * [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_parameter.html.markdown.
  */
 export class Parameter extends pulumi.CustomResource {

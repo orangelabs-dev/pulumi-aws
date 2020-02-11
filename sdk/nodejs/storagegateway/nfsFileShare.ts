@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Manages an AWS Storage Gateway NFS File Share.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.storagegateway.NfsFileShare("example", {
  *     clientLists: ["0.0.0.0/0"],
  *     gatewayArn: aws_storagegateway_gateway_example.arn,
@@ -22,7 +22,7 @@ import * as utilities from "../utilities";
  *     roleArn: aws_iam_role_example.arn,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown.
  */
 export class NfsFileShare extends pulumi.CustomResource {

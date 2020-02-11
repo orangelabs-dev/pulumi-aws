@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a resource to manage AWS EMR Security Configurations
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = new aws.emr.SecurityConfiguration("foo", {
  *     configuration: `{
  *   "EncryptionConfiguration": {
@@ -32,7 +32,7 @@ import * as utilities from "../utilities";
  * `,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_security_configuration.html.markdown.
  */
 export class SecurityConfiguration extends pulumi.CustomResource {

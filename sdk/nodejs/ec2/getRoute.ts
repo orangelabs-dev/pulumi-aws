@@ -8,23 +8,23 @@ import * as utilities from "../utilities";
 
 /**
  * `aws.ec2.Route` provides details about a specific Route.
- * 
+ *
  * This resource can prove useful when finding the resource
  * associated with a CIDR. For example, finding the peering
  * connection associated with a CIDR value.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * The following example shows how one might use a CIDR value to find a network interface id
  * and use this to create a data source of that network interface.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * const subnetId = config.require("subnetId");
- * 
+ *
  * const selected = aws.ec2.getRouteTable({
  *     subnetId: subnetId,
  * });
@@ -36,7 +36,7 @@ import * as utilities from "../utilities";
  *     networkInterfaceId: route.networkInterfaceId!,
  * }));
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown.
  */
 export function getRoute(args: GetRouteArgs, opts?: pulumi.InvokeOptions): Promise<GetRouteResult> & GetRouteResult {

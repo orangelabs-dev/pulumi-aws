@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an API Gateway VPC Link.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const exampleLoadBalancer = new aws.lb.LoadBalancer("example", {
  *     internal: true,
  *     loadBalancerType: "network",
@@ -25,7 +25,7 @@ import * as utilities from "../utilities";
  *     targetArn: exampleLoadBalancer.arn,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_vpc_link.html.markdown.
  */
 export class VpcLink extends pulumi.CustomResource {

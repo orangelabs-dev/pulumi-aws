@@ -8,15 +8,15 @@ import * as utilities from "../utilities";
 
 /**
  * Get information about the organization that the user's account belongs to
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### SNS topic that can be interacted by the organization only
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = aws.organizations.getOrganization();
  * const snsTopic = new aws.sns.Topic("snsTopic", {});
  * const snsTopicPolicyPolicyDocument = snsTopic.arn.apply(arn => aws.iam.getPolicyDocument({
@@ -43,7 +43,7 @@ import * as utilities from "../utilities";
  *     policy: snsTopicPolicyPolicyDocument.json,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organization.html.markdown.
  */
 export function getOrganization(opts?: pulumi.InvokeOptions): Promise<GetOrganizationResult> & GetOrganizationResult {

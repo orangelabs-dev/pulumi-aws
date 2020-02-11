@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a Service Discovery Service resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const exampleVpc = new aws.ec2.Vpc("example", {
  *     cidrBlock: "10.0.0.0/16",
  *     enableDnsHostnames: true,
@@ -38,11 +38,11 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const examplePublicDnsNamespace = new aws.servicediscovery.PublicDnsNamespace("example", {
  *     description: "example",
  * });
@@ -61,7 +61,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_service.html.markdown.
  */
 export class Service extends pulumi.CustomResource {

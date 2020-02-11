@@ -8,13 +8,13 @@ import {RestApi} from "./index";
 
 /**
  * Provides an HTTP Method Integration for an API Gateway Integration.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
  *     description: "This is my API for demonstration purposes",
  * });
@@ -49,18 +49,18 @@ import {RestApi} from "./index";
  *     type: "MOCK",
  * });
  * ```
- * 
+ *
  * ## Lambda integration
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * // Variables
  * const myregion = config.require("myregion");
  * const accountId = config.require("accountId");
- * 
+ *
  * // API Gateway
  * const api = new aws.apigateway.RestApi("api", {});
  * const resource = new aws.apigateway.Resource("resource", {
@@ -113,17 +113,17 @@ import {RestApi} from "./index";
  *     sourceArn: pulumi.interpolate`arn:aws:execute-api:${myregion}:${accountId}:${api.id}/*&#47;${method.httpMethod}${resource.path}`,
  * });
  * ```
- * 
+ *
  * ## VPC Link
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * const name = config.require("name");
  * const subnetId = config.require("subnetId");
- * 
+ *
  * const testLoadBalancer = new aws.lb.LoadBalancer("test", {
  *     internal: true,
  *     loadBalancerType: "network",
@@ -169,7 +169,7 @@ import {RestApi} from "./index";
  *     uri: "https://www.google.de",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration.html.markdown.
  */
 export class Integration extends pulumi.CustomResource {

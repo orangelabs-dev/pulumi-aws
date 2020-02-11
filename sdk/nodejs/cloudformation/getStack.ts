@@ -9,13 +9,13 @@ import * as utilities from "../utilities";
 /**
  * The CloudFormation Stack data source allows access to stack
  * outputs and other useful data including the template body.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const network = aws.cloudformation.getStack({
  *     name: "my-network-stack",
  * });
@@ -28,7 +28,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_stack.html.markdown.
  */
 export function getStack(args: GetStackArgs, opts?: pulumi.InvokeOptions): Promise<GetStackResult> & GetStackResult {

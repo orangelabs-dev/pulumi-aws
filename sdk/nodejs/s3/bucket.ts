@@ -11,15 +11,15 @@ import {CannedAcl} from "./index";
 
 /**
  * Provides a S3 bucket resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### Private Bucket w/ Tags
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const bucket = new aws.s3.Bucket("b", {
  *     acl: "private",
  *     tags: {
@@ -28,14 +28,14 @@ import {CannedAcl} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * ### Static Website Hosting
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
  * import * as fs from "fs";
- * 
+ *
  * const bucket = new aws.s3.Bucket("b", {
  *     acl: "public-read",
  *     policy: fs.readFileSync("policy.json", "utf-8"),
@@ -54,13 +54,13 @@ import {CannedAcl} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * ### Using CORS
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const bucket = new aws.s3.Bucket("b", {
  *     acl: "public-read",
  *     corsRules: [{
@@ -75,13 +75,13 @@ import {CannedAcl} from "./index";
  *     }],
  * });
  * ```
- * 
+ *
  * ### Using versioning
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const bucket = new aws.s3.Bucket("b", {
  *     acl: "private",
  *     versioning: {
@@ -89,13 +89,13 @@ import {CannedAcl} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * ### Enable Logging
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const logBucket = new aws.s3.Bucket("logBucket", {
  *     acl: "log-delivery-write",
  * });
@@ -107,13 +107,13 @@ import {CannedAcl} from "./index";
  *     }],
  * });
  * ```
- * 
+ *
  * ### Using object lifecycle
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const bucket = new aws.s3.Bucket("bucket", {
  *     acl: "private",
  *     lifecycleRules: [
@@ -173,13 +173,13 @@ import {CannedAcl} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * ### Using replication configuration
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const central = new aws.Provider("central", {
  *     region: "eu-central-1",
  * });
@@ -265,13 +265,13 @@ import {CannedAcl} from "./index";
  *     role: replicationRole.name,
  * });
  * ```
- * 
+ *
  * ### Enable Default Server Side Encryption
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const mykey = new aws.kms.Key("mykey", {
  *     deletionWindowInDays: 10,
  *     description: "This key is used to encrypt bucket objects",
@@ -287,7 +287,7 @@ import {CannedAcl} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown.
  */
 export class Bucket extends pulumi.CustomResource {

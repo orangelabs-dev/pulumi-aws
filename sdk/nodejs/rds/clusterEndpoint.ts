@@ -7,14 +7,14 @@ import * as utilities from "../utilities";
 /**
  * Manages a RDS Aurora Cluster Endpoint.
  * You can refer to the [User Guide][1].
- * 
- * 
+ *
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const defaultCluster = new aws.rds.Cluster("default", {
  *     availabilityZones: [
  *         "us-west-2a",
@@ -65,7 +65,7 @@ import * as utilities from "../utilities";
  *     ],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown.
  */
 export class ClusterEndpoint extends pulumi.CustomResource {

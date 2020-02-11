@@ -8,22 +8,22 @@ import * as utilities from "../utilities";
 
 /**
  * `aws.route53.getResolverRules` provides details about a set of Route53 Resolver rules.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * The following example shows how to get Route53 Resolver rules based on tags.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = aws.route53.getResolverRules({
  *     tags: [{
  *         Environment: "dev",
  *     }],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown.
  */
 export function getResolverRules(args?: GetResolverRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetResolverRulesResult> & GetResolverRulesResult {

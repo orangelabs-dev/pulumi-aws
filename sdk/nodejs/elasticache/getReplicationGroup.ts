@@ -8,18 +8,18 @@ import * as utilities from "../utilities";
 
 /**
  * Use this data source to get information about an Elasticache Replication Group.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const bar = aws.elasticache.getReplicationGroup({
  *     replicationGroupId: "example",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown.
  */
 export function getReplicationGroup(args: GetReplicationGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetReplicationGroupResult> & GetReplicationGroupResult {

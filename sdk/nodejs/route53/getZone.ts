@@ -8,18 +8,18 @@ import * as utilities from "../utilities";
 
 /**
  * `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
- * 
+ *
  * This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * The following example shows how to get a Hosted Zone from its name and from this data how to create a Record Set.
- * 
- * 
+ *
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const selected = aws.route53.getZone({
  *     name: "test.com.",
  *     privateZone: true,
@@ -32,7 +32,7 @@ import * as utilities from "../utilities";
  *     zoneId: selected.zoneId!,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown.
  */
 export function getZone(args?: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneResult> & GetZoneResult {

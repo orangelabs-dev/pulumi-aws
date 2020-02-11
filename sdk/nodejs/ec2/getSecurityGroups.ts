@@ -9,13 +9,13 @@ import * as utilities from "../utilities";
 /**
  * Use this data source to get IDs and VPC membership of Security Groups that are created
  * outside of this provider.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const test = aws.ec2.getSecurityGroups({
  *     tags: {
  *         Application: "k8s",
@@ -23,11 +23,11 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const test = aws.ec2.getSecurityGroups({
  *     filters: [
  *         {
@@ -41,7 +41,7 @@ import * as utilities from "../utilities";
  *     ],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_groups.html.markdown.
  */
 export function getSecurityGroups(args?: GetSecurityGroupsArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityGroupsResult> & GetSecurityGroupsResult {

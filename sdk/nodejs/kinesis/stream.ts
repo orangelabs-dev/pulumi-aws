@@ -7,15 +7,15 @@ import * as utilities from "../utilities";
 /**
  * Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
  * scales elastically for real-time processing of streaming big data.
- * 
+ *
  * For more details, see the [Amazon Kinesis Documentation][1].
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const testStream = new aws.kinesis.Stream("testStream", {
  *     retentionPeriod: 48,
  *     shardCount: 1,
@@ -28,7 +28,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_stream.html.markdown.
  */
 export class Stream extends pulumi.CustomResource {

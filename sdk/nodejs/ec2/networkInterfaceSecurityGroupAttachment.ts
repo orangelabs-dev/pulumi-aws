@@ -8,29 +8,29 @@ import * as utilities from "../utilities";
  * This resource attaches a security group to an Elastic Network Interface (ENI).
  * It can be used to attach a security group to any existing ENI, be it a
  * secondary ENI or one attached as the primary interface on an instance.
- * 
+ *
  * > **NOTE on instances, interfaces, and security groups:** This provider currently
  * provides the capability to assign security groups via the [`aws.ec2.Instance`][1]
  * and the [`aws.ec2.NetworkInterface`][2] resources. Using this resource in
  * conjunction with security groups provided in-line in those resources will cause
  * conflicts, and will lead to spurious diffs and undefined behavior - please use
  * one or the other.
- * 
+ *
  * [1]: https://www.terraform.io/docs/providers/aws/d/instance.html
  * [2]: https://www.terraform.io/docs/providers/aws/r/network_interface.html
- * 
+ *
  * ## Example Usage
- * 
+ *
  * The following provides a very basic example of setting up an instance (provided
  * by `instance`) in the default security group, creating a security group
  * (provided by `sg`) and then attaching the security group to the instance's
  * primary network interface via the `aws.ec2.NetworkInterfaceSecurityGroupAttachment` resource,
  * named `sgAttachment`:
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const ami = aws.getAmi({
  *     filters: [{
  *         name: "name",
@@ -56,15 +56,15 @@ import * as utilities from "../utilities";
  *     securityGroupId: sg.id,
  * });
  * ```
- * 
+ *
  * In this example, `instance` is provided by the `aws.ec2.Instance` data source,
  * fetching an external instance, possibly not managed by this provider.
  * `sgAttachment` then attaches to the output instance's `networkInterfaceId`:
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const instance = aws.ec2.getInstance({
  *     instanceId: "i-1234567890abcdef0",
  * });
@@ -78,11 +78,11 @@ import * as utilities from "../utilities";
  *     securityGroupId: sg.id,
  * });
  * ```
- * 
+ *
  * ## Output Reference
- * 
+ *
  * There are no outputs for this resource.
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown.
  */
 export class NetworkInterfaceSecurityGroupAttachment extends pulumi.CustomResource {

@@ -8,13 +8,13 @@ import {PolicyDocument} from "./index";
 
 /**
  * Provides an IAM policy attached to a user.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const lbUser = new aws.iam.User("lb", {
  *     path: "/system/",
  * });
@@ -38,7 +38,7 @@ import {PolicyDocument} from "./index";
  *     user: lbUser.name,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_policy.html.markdown.
  */
 export class UserPolicy extends pulumi.CustomResource {

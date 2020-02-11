@@ -8,15 +8,15 @@ import * as utilities from "../utilities";
 
 /**
  * Manages an NFS Location within AWS DataSync.
- * 
+ *
  * > **NOTE:** The DataSync Agents must be available before creating this resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.datasync.NfsLocation("example", {
  *     onPremConfig: {
  *         agentArns: [aws_datasync_agent_example.arn],
@@ -25,7 +25,7 @@ import * as utilities from "../utilities";
  *     subdirectory: "/exported/path",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown.
  */
 export class NfsLocation extends pulumi.CustomResource {

@@ -9,13 +9,13 @@ import * as utilities from "../utilities";
 /**
  * Use this data source to get information about an EBS volume for use in other
  * resources.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const ebsVolume = aws.ebs.getVolume({
  *     filters: [
  *         {
@@ -30,7 +30,7 @@ import * as utilities from "../utilities";
  *     mostRecent: true,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown.
  */
 export function getVolume(args?: GetVolumeArgs, opts?: pulumi.InvokeOptions): Promise<GetVolumeResult> & GetVolumeResult {

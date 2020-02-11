@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an Elastic Container Registry Repository.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = new aws.ecr.Repository("foo", {
  *     imageScanningConfiguration: {
  *         scanOnPush: true,
@@ -22,7 +22,7 @@ import * as utilities from "../utilities";
  *     imageTagMutability: "MUTABLE",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecr_repository.html.markdown.
  */
 export class Repository extends pulumi.CustomResource {

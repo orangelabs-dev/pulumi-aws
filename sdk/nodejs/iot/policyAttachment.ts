@@ -9,14 +9,14 @@ import {Policy} from "./index";
 
 /**
  * Provides an IoT policy attachment.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
  * import * as fs from "fs";
- * 
+ *
  * const pubsub = new aws.iot.Policy("pubsub", {
  *     policy: `{
  *   "Version": "2012-10-17",
@@ -41,7 +41,7 @@ import {Policy} from "./index";
  *     target: cert.arn,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown.
  */
 export class PolicyAttachment extends pulumi.CustomResource {

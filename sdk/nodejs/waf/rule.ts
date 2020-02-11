@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a WAF Rule Resource
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const ipset = new aws.waf.IpSet("ipset", {
  *     ipSetDescriptors: [{
  *         type: "IPV4",
@@ -30,7 +30,7 @@ import * as utilities from "../utilities";
  *     }],
  * }, {dependsOn: [ipset]});
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_rule.html.markdown.
  */
 export class Rule extends pulumi.CustomResource {

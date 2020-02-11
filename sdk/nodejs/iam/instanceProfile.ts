@@ -8,13 +8,13 @@ import {Role} from "./index";
 
 /**
  * Provides an IAM instance profile.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const role = new aws.iam.Role("role", {
  *     assumeRolePolicy: `{
  *     "Version": "2012-10-17",
@@ -36,7 +36,7 @@ import {Role} from "./index";
  *     role: role.name,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_instance_profile.html.markdown.
  */
 export class InstanceProfile extends pulumi.CustomResource {
@@ -91,7 +91,7 @@ export class InstanceProfile extends pulumi.CustomResource {
      */
     public readonly role!: pulumi.Output<string>;
     /**
-     * 
+     *
      * A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
      */
     public readonly roles!: pulumi.Output<string[]>;
@@ -171,7 +171,7 @@ export interface InstanceProfileState {
      */
     readonly role?: pulumi.Input<string> | pulumi.Input<Role>;
     /**
-     * 
+     *
      * A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
      */
     readonly roles?: pulumi.Input<pulumi.Input<string> | pulumi.Input<Role>[]>;
@@ -202,7 +202,7 @@ export interface InstanceProfileArgs {
      */
     readonly role?: pulumi.Input<string> | pulumi.Input<Role>;
     /**
-     * 
+     *
      * A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
      */
     readonly roles?: pulumi.Input<pulumi.Input<string> | pulumi.Input<Role>[]>;

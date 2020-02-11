@@ -7,13 +7,13 @@ import * as utilities from "../utilities";
 /**
  * Provides a Direct Connect transit virtual interface resource.
  * A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const exampleGateway = new aws.directconnect.Gateway("example", {
  *     amazonSideAsn: "64512",
  * });
@@ -25,7 +25,7 @@ import * as utilities from "../utilities";
  *     vlan: 4094,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_transit_virtual_interface.html.markdown.
  */
 export class TransitVirtualInterface extends pulumi.CustomResource {

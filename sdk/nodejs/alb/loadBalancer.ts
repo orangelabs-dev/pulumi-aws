@@ -10,17 +10,17 @@ import {IpAddressType, LoadBalancerType} from "./index";
 
 /**
  * Provides a Load Balancer resource.
- * 
+ *
  * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### Application Load Balancer
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const test = new aws.lb.LoadBalancer("test", {
  *     accessLogs: {
  *         bucket: aws_s3_bucket_lb_logs.bucket,
@@ -37,13 +37,13 @@ import {IpAddressType, LoadBalancerType} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * ### Network Load Balancer
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const test = new aws.lb.LoadBalancer("test", {
  *     enableDeletionProtection: true,
  *     internal: false,
@@ -54,13 +54,13 @@ import {IpAddressType, LoadBalancerType} from "./index";
  *     },
  * });
  * ```
- * 
+ *
  * ### Specifying Elastic IPs
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.lb.LoadBalancer("example", {
  *     loadBalancerType: "network",
  *     subnetMappings: [
@@ -75,7 +75,7 @@ import {IpAddressType, LoadBalancerType} from "./index";
  *     ],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/alb.html.markdown.
  */
 export class LoadBalancer extends pulumi.CustomResource {
@@ -245,7 +245,7 @@ export class LoadBalancer extends pulumi.CustomResource {
         if (!opts.version) {
             opts.version = utilities.getVersion();
         }
-        const aliasOpts = { aliases: [{ type: "aws:applicationloadbalancing/loadBalancer:LoadBalancer"}] };
+        const aliasOpts = { aliases: [{ type: "aws:applicationloadbalancing/loadBalancer:LoadBalancer" }] };
         opts = opts ? pulumi.mergeOptions(opts, aliasOpts) : aliasOpts;
         super(LoadBalancer.__pulumiType, name, inputs, opts);
     }

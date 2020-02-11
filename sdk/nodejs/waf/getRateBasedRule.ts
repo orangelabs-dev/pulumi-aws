@@ -8,18 +8,18 @@ import * as utilities from "../utilities";
 
 /**
  * `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = aws.waf.getRateBasedRule({
  *     name: "tfWAFRateBasedRule",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_rate_based_rule.html.markdown.
  */
 export function getRateBasedRule(args: GetRateBasedRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetRateBasedRuleResult> & GetRateBasedRuleResult {

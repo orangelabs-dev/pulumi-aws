@@ -8,15 +8,15 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an Application AutoScaling ScheduledAction resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### DynamoDB Table Autoscaling
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const dynamodbTarget = new aws.appautoscaling.Target("dynamodb", {
  *     maxCapacity: 100,
  *     minCapacity: 5,
@@ -36,13 +36,13 @@ import * as utilities from "../utilities";
  *     serviceNamespace: dynamodbTarget.serviceNamespace,
  * });
  * ```
- * 
+ *
  * ### ECS Service Autoscaling
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const ecsTarget = new aws.appautoscaling.Target("ecs", {
  *     maxCapacity: 4,
  *     minCapacity: 1,
@@ -62,7 +62,7 @@ import * as utilities from "../utilities";
  *     serviceNamespace: ecsTarget.serviceNamespace,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_scheduled_action.html.markdown.
  */
 export class ScheduledAction extends pulumi.CustomResource {

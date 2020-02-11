@@ -6,19 +6,19 @@ import * as utilities from "../utilities";
 
 /**
  * Creates an entry (a rule) in a network ACL with the specified rule number.
- * 
+ *
  * > **NOTE on Network ACLs and Network ACL Rules:** This provider currently
  * provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
  * defined in-line. At this time you cannot use a Network ACL with in-line rules
  * in conjunction with any Network ACL Rule resources. Doing so will cause
  * a conflict of rule settings and will overwrite rules.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const barNetworkAcl = new aws.ec2.NetworkAcl("bar", {
  *     vpcId: aws_vpc_foo.id,
  * });
@@ -34,9 +34,9 @@ import * as utilities from "../utilities";
  *     toPort: 22,
  * });
  * ```
- * 
+ *
  * > **Note:** One of either `cidrBlock` or `ipv6CidrBlock` is required.
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown.
  */
 export class NetworkAclRule extends pulumi.CustomResource {

@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a resource to create an organization.
- * 
+ *
  * ## Example Usage:
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const org = new aws.organizations.Organization("org", {
  *     awsServiceAccessPrincipals: [
  *         "cloudtrail.amazonaws.com",
@@ -23,7 +23,7 @@ import * as utilities from "../utilities";
  *     featureSet: "ALL",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/organizations_organization.html.markdown.
  */
 export class Organization extends pulumi.CustomResource {

@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Get an existing AWS Customer Gateway.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = aws.ec2.getCustomerGateway({
  *     filters: [{
  *         name: "tag:Name",
@@ -32,7 +32,7 @@ import * as utilities from "../utilities";
  *     vpnGatewayId: main.id,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown.
  */
 export function getCustomerGateway(args?: GetCustomerGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetCustomerGatewayResult> & GetCustomerGatewayResult {

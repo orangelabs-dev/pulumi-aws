@@ -8,18 +8,18 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a DynamoDB table resource
- * 
+ *
  * > **Note:** It is recommended to use `lifecycle` [`ignoreChanges`](https://www.terraform.io/docs/configuration/resources.html#ignore_changes) for `readCapacity` and/or `writeCapacity` if there's [autoscaling policy](https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html) attached to the table.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * The following dynamodb table description models the table and GSI shown
  * in the [AWS SDK example documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html)
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const basicDynamodbTable = new aws.dynamodb.Table("basic-dynamodb-table", {
  *     attributes: [
  *         {
@@ -59,7 +59,7 @@ import * as utilities from "../utilities";
  *     writeCapacity: 20,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dynamodb_table.html.markdown.
  */
 export class Table extends pulumi.CustomResource {

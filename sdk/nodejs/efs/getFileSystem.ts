@@ -8,21 +8,21 @@ import * as utilities from "../utilities";
 
 /**
  * Provides information about an Elastic File System (EFS).
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * const fileSystemId = config.get("fileSystemId") || "";
- * 
+ *
  * const byId = aws.efs.getFileSystem({
  *     fileSystemId: fileSystemId,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown.
  */
 export function getFileSystem(args?: GetFileSystemArgs, opts?: pulumi.InvokeOptions): Promise<GetFileSystemResult> & GetFileSystemResult {

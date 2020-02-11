@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an RDS DB subnet group resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const defaultSubnetGroup = new aws.rds.SubnetGroup("default", {
  *     subnetIds: [
  *         aws_subnet_frontend.id,
@@ -23,7 +23,7 @@ import * as utilities from "../utilities";
  *     },
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown.
  */
 export class SubnetGroup extends pulumi.CustomResource {

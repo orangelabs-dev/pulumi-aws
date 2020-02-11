@@ -8,22 +8,22 @@ import * as utilities from "../utilities";
 
 /**
  * > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
- * 
+ *
  * Provides information about a Load Balancer Listener.
- * 
+ *
  * This data source can prove useful when a module accepts an LB Listener as an
  * input variable and needs to know the LB it is attached to, or other
  * information specific to the listener in question.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * const listenerArn = config.require("listenerArn");
- * 
+ *
  * const listener = aws.lb.getListener({
  *     arn: listenerArn,
  * });
@@ -35,7 +35,7 @@ import * as utilities from "../utilities";
  *     port: 443,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener_legacy.html.markdown.
  */
 export function getListener(args?: GetListenerArgs, opts?: pulumi.InvokeOptions): Promise<GetListenerResult> & GetListenerResult {

@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a Direct Connect public virtual interface resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = new aws.directconnect.PublicVirtualInterface("foo", {
  *     addressFamily: "ipv4",
  *     amazonAddress: "175.45.176.2/30",
@@ -26,7 +26,7 @@ import * as utilities from "../utilities";
  *     vlan: 4094,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_public_virtual_interface.html.markdown.
  */
 export class PublicVirtualInterface extends pulumi.CustomResource {

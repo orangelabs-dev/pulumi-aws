@@ -8,17 +8,17 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a CodeCommit Trigger Resource.
- * 
+ *
  * > **NOTE on CodeCommit**: The CodeCommit is not yet rolled out
  * in all regions - available regions are listed
  * [the AWS Docs](https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region).
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const testRepository = new aws.codecommit.Repository("test", {
  *     repositoryName: "test",
  * });
@@ -31,7 +31,7 @@ import * as utilities from "../utilities";
  *     }],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown.
  */
 export class Trigger extends pulumi.CustomResource {

@@ -8,16 +8,16 @@ import {RestApi} from "./index";
 
 /**
  * Provides an API Gateway Deployment.
- * 
+ *
  * > **Note:** Depends on having `aws.apigateway.Integration` inside your rest api (which in turn depends on `aws.apigateway.Method`). To avoid race conditions
  * you might need to add an explicit `dependsOn = ["aws_api_gateway_integration.name"]`.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
  *     description: "This is my API for demonstration purposes",
  * });
@@ -46,7 +46,7 @@ import {RestApi} from "./index";
  *     },
  * }, {dependsOn: [myDemoIntegration]});
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_deployment.html.markdown.
  */
 export class Deployment extends pulumi.CustomResource {

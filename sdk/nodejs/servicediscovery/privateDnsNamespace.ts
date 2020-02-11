@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a Service Discovery Private DNS Namespace resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const exampleVpc = new aws.ec2.Vpc("example", {
  *     cidrBlock: "10.0.0.0/16",
  * });
@@ -21,7 +21,7 @@ import * as utilities from "../utilities";
  *     vpc: exampleVpc.id,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/service_discovery_private_dns_namespace.html.markdown.
  */
 export class PrivateDnsNamespace extends pulumi.CustomResource {

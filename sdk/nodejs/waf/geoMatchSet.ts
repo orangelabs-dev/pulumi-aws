@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a WAF Geo Match Set Resource
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const geoMatchSet = new aws.waf.GeoMatchSet("geoMatchSet", {
  *     geoMatchConstraints: [
  *         {
@@ -28,7 +28,7 @@ import * as utilities from "../utilities";
  *     ],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_geo_match_set.html.markdown.
  */
 export class GeoMatchSet extends pulumi.CustomResource {

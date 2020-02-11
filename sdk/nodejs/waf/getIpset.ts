@@ -8,18 +8,18 @@ import * as utilities from "../utilities";
 
 /**
  * `aws.waf.IpSet` Retrieves a WAF IP Set Resource Id.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = aws.waf.getIpset({
  *     name: "tfWAFIPSet",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_ipset.html.markdown.
  */
 export function getIpset(args: GetIpsetArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsetResult> & GetIpsetResult {

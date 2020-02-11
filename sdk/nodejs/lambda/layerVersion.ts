@@ -6,34 +6,34 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.
- * 
+ *
  * For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const lambdaLayer = new aws.lambda.LayerVersion("lambdaLayer", {
  *     compatibleRuntimes: ["nodejs8.10"],
  *     code: new pulumi.asset.FileArchive("lambda_layer_payload.zip"),
  *     layerName: "lambdaLayerName",
  * });
  * ```
- * 
+ *
  * ## Specifying the Deployment Package
- * 
+ *
  * AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which `compatibleRuntimes` this layer specifies.
  * See [Runtimes][2] for the valid values of `compatibleRuntimes`.
- * 
+ *
  * Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or
  * indirectly via Amazon S3 (using the `s3Bucket`, `s3Key` and `s3ObjectVersion` arguments). When providing the deployment
  * package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
- * 
+ *
  * For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
  * large files efficiently.
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown.
  */
 export class LayerVersion extends pulumi.CustomResource {

@@ -10,15 +10,15 @@ import {ARN} from "..";
 
 /**
  * Manages an AWS DataSync EFS Location.
- * 
+ *
  * > **NOTE:** The EFS File System must have a mounted EFS Mount Target before creating this resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.datasync.EfsLocation("example", {
  *     ec2Config: {
  *         securityGroupArns: [aws_security_group_example.arn],
@@ -29,7 +29,7 @@ import {ARN} from "..";
  *     efsFileSystemArn: aws_efs_mount_target_example.fileSystemArn,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown.
  */
 export class EfsLocation extends pulumi.CustomResource {

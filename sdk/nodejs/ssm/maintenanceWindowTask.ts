@@ -8,15 +8,15 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an SSM Maintenance Window Task resource
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### Automation Tasks
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.ssm.MaintenanceWindowTask("example", {
  *     maxConcurrency: "2",
  *     maxErrors: "1",
@@ -40,13 +40,13 @@ import * as utilities from "../utilities";
  *     windowId: aws_ssm_maintenance_window_example.id,
  * });
  * ```
- * 
+ *
  * ### Lambda Tasks
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.ssm.MaintenanceWindowTask("example", {
  *     maxConcurrency: "2",
  *     maxErrors: "1",
@@ -67,13 +67,13 @@ import * as utilities from "../utilities";
  *     windowId: aws_ssm_maintenance_window_example.id,
  * });
  * ```
- * 
+ *
  * ### Run Command Tasks
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.ssm.MaintenanceWindowTask("example", {
  *     maxConcurrency: "2",
  *     maxErrors: "1",
@@ -105,13 +105,13 @@ import * as utilities from "../utilities";
  *     windowId: aws_ssm_maintenance_window_example.id,
  * });
  * ```
- * 
+ *
  * ### Step Function Tasks
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.ssm.MaintenanceWindowTask("example", {
  *     maxConcurrency: "2",
  *     maxErrors: "1",
@@ -132,7 +132,7 @@ import * as utilities from "../utilities";
  *     windowId: aws_ssm_maintenance_window_example.id,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_maintenance_window_task.html.markdown.
  */
 export class MaintenanceWindowTask extends pulumi.CustomResource {

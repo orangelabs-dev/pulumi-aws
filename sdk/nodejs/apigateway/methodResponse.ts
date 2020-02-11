@@ -8,13 +8,13 @@ import {RestApi} from "./index";
 
 /**
  * Provides an HTTP Method Response for an API Gateway Resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
  *     description: "This is my API for demonstration purposes",
  * });
@@ -42,7 +42,7 @@ import {RestApi} from "./index";
  *     statusCode: "200",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_method_response.html.markdown.
  */
 export class MethodResponse extends pulumi.CustomResource {

@@ -8,13 +8,13 @@ import * as utilities from "../utilities";
 
 /**
  * Provides an AWS Backup plan resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.backup.Plan("example", {
  *     rules: [{
  *         ruleName: "tfExampleBackupRule",
@@ -23,7 +23,7 @@ import * as utilities from "../utilities";
  *     }],
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown.
  */
 export class Plan extends pulumi.CustomResource {

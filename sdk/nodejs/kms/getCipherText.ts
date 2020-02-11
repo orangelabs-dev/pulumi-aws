@@ -11,16 +11,16 @@ import * as utilities from "../utilities";
  * by using an AWS KMS customer master key. The value returned by this data source
  * changes every apply. For a stable ciphertext value, see the [`aws.kms.Ciphertext`
  * resource](https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html).
- * 
+ *
  * > **Note:** All arguments including the plaintext be stored in the raw state as plain-text.
  * [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const oauthConfig = new aws.kms.Key("oauthConfig", {
  *     description: "oauth config",
  *     isEnabled: true,
@@ -34,7 +34,7 @@ import * as utilities from "../utilities";
  * `,
  * }));
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown.
  */
 export function getCipherText(args: GetCipherTextArgs, opts?: pulumi.InvokeOptions): Promise<GetCipherTextResult> & GetCipherTextResult {

@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Creates and manages an AWS XRay Sampling Rule.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.xray.SamplingRule("example", {
  *     attributes: {
  *         Hello: "Tris",
@@ -30,7 +30,7 @@ import * as utilities from "../utilities";
  *     version: 1,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/xray_sampling_rule.html.markdown.
  */
 export class SamplingRule extends pulumi.CustomResource {

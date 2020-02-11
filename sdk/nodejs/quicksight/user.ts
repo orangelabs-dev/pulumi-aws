@@ -6,13 +6,13 @@ import * as utilities from "../utilities";
 
 /**
  * Resource for managing QuickSight User
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const example = new aws.quicksight.User("example", {
  *     email: "author@example.com",
  *     identityType: "IAM",
@@ -20,7 +20,7 @@ import * as utilities from "../utilities";
  *     userRole: "AUTHOR",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/quicksight_user.html.markdown.
  */
 export class User extends pulumi.CustomResource {

@@ -6,15 +6,15 @@ import * as utilities from "../utilities";
 
 /**
  * Provides a resource to manage a CloudWatch log resource policy.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### Elasticsearch Log Publishing
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const elasticsearch_log_publishing_policyPolicyDocument = aws.iam.getPolicyDocument({
  *     statements: [{
  *         actions: [
@@ -34,13 +34,13 @@ import * as utilities from "../utilities";
  *     policyName: "elasticsearch-log-publishing-policy",
  * });
  * ```
- * 
+ *
  * ### Route53 Query Logging
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const route53_query_logging_policyPolicyDocument = aws.iam.getPolicyDocument({
  *     statements: [{
  *         actions: [
@@ -59,7 +59,7 @@ import * as utilities from "../utilities";
  *     policyName: "route53-query-logging-policy",
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_resource_policy.html.markdown.
  */
 export class LogResourcePolicy extends pulumi.CustomResource {

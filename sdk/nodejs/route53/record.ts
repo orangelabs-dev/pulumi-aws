@@ -10,15 +10,15 @@ import {RecordType} from "./index";
 
 /**
  * Provides a Route53 record resource.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ### Simple routing policy
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const www = new aws.route53.Record("www", {
  *     name: "www.example.com",
  *     records: [aws_eip_lb.publicIp],
@@ -27,14 +27,14 @@ import {RecordType} from "./index";
  *     zoneId: aws_route53_zone_primary.zoneId,
  * });
  * ```
- * 
+ *
  * ### Weighted routing policy
  * Other routing policies are configured similarly. See [AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for details.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const wwwDev = new aws.route53.Record("www-dev", {
  *     name: "www",
  *     records: ["dev.example.com"],
@@ -58,18 +58,18 @@ import {RecordType} from "./index";
  *     zoneId: aws_route53_zone_primary.zoneId,
  * });
  * ```
- * 
+ *
  * ### Alias record
  * See [related part of AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
  * to understand differences between alias and non-alias records.
- * 
+ *
  * TTL for all alias records is [60 seconds](https://aws.amazon.com/route53/faqs/#dns_failover_do_i_need_to_adjust),
  * you cannot change this, therefore `ttl` has to be omitted in alias records.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const main = new aws.elb.LoadBalancer("main", {
  *     availabilityZones: ["us-east-1c"],
  *     listeners: [{
@@ -90,15 +90,15 @@ import {RecordType} from "./index";
  *     zoneId: aws_route53_zone_primary.zoneId,
  * });
  * ```
- * 
+ *
  * ### NS and SOA Record Management
- * 
+ *
  * When creating Route 53 zones, the `NS` and `SOA` records for the zone are automatically created. Enabling the `allowOverwrite` argument will allow managing these records in a single deployment without the requirement for `import`.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const exampleZone = new aws.route53.Zone("example", {});
  * const exampleRecord = new aws.route53.Record("example", {
  *     allowOverwrite: true,
@@ -114,7 +114,7 @@ import {RecordType} from "./index";
  *     zoneId: exampleZone.zoneId,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown.
  */
 export class Record extends pulumi.CustomResource {

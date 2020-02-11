@@ -8,29 +8,29 @@ import * as utilities from "../utilities";
 
 /**
  * > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
- * 
+ *
  * Provides information about a Load Balancer Target Group.
- * 
+ *
  * This data source can prove useful when a module accepts an LB Target Group as an
  * input variable and needs to know its attributes. It can also be used to get the ARN of
  * an LB Target Group for use in other resources, given LB Target Group name.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const config = new pulumi.Config();
  * const lbTgArn = config.get("lbTgArn") || "";
  * const lbTgName = config.get("lbTgName") || "";
- * 
+ *
  * const test = aws.lb.getTargetGroup({
  *     arn: lbTgArn,
  *     name: lbTgName,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/alb_target_group.html.markdown.
  */
 export function getTargetGroup(args?: GetTargetGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetTargetGroupResult> & GetTargetGroupResult {

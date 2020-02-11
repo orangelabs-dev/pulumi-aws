@@ -8,35 +8,35 @@ import * as utilities from "../utilities";
 
 /**
  * Gets the contents of the specified Systems Manager document.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * To get the contents of the document owned by AWS.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const foo = aws.ssm.getDocument({
  *     documentFormat: "YAML",
  *     name: "AWS-GatherSoftwareInventory",
  * });
- * 
+ *
  * export const content = foo.content;
  * ```
- * 
+ *
  * To get the contents of the custom document.
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
  *     documentFormat: "JSON",
  *     name: name,
  * }));
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_document.html.markdown.
  */
 export function getDocument(args: GetDocumentArgs, opts?: pulumi.InvokeOptions): Promise<GetDocumentResult> & GetDocumentResult {

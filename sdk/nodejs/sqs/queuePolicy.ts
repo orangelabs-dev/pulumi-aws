@@ -7,13 +7,13 @@ import * as utilities from "../utilities";
 /**
  * Allows you to set a policy of an SQS Queue
  * while referencing ARN of the queue within the policy.
- * 
+ *
  * ## Example Usage
- * 
+ *
  * ```typescript
  * import * as pulumi from "@pulumi/pulumi";
  * import * as aws from "@pulumi/aws";
- * 
+ *
  * const queue = new aws.sqs.Queue("q", {});
  * const test = new aws.sqs.QueuePolicy("test", {
  *     policy: pulumi.interpolate`{
@@ -38,7 +38,7 @@ import * as utilities from "../utilities";
  *     queueUrl: queue.id,
  * });
  * ```
- * 
+ *
  * > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sqs_queue_policy.html.markdown.
  */
 export class QueuePolicy extends pulumi.CustomResource {
